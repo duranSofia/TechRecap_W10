@@ -1,5 +1,81 @@
 ### TechRecap_Week 10
 
+## React Lifecycle Methods
+
+[![](https://programmingwithmosh.com/wp-content/uploads/2018/10/Screen-Shot-2018-10-31-at-1.44.28-PM-1024x567.png)](https://programmingwithmosh.com/wp-content/uploads/2018/10/Screen-Shot-2018-10-31-at-1.44.28-PM-1024x567.png "react lifecycle methods")
+
+### Fetching with Axios:
+
+```javascript
+useEffect(() => {
+  setAppState({ loading: true });
+  const apiUrl = "https://api.github.com/users/hacktivist123/repos";
+  axios.get(apiURL).then((repos) => {
+    const allRepos = repos.data;
+    setAppState({ loading: false, repos: allRepos });
+  });
+}, [setAppState]);
+```
+
+### prevProps, prevState:
+
+= the props and state before re-render. Can be used to compare current props or state to the previous ones. Ex:
+
+```javascript
+componentDidUpdate(prevProps, nextState){
+    if(prevProps.emailValue !== this.props.emailValue){
+        this.setState({showError: false})
+    }
+}
+```
+
+<!-- ### Adding and removing favorites: -->
+
+### Children props:
+
+Used to display whatever you include between the opening and closing tags when invoking a component. Ex:
+
+```javascript
+const Picture = (props) {
+    return (
+        <div>
+            <img src={props.src}/>
+            {props.children}
+        </div>
+    )
+}
+```
+
+This component contains and <img> that is receiving some props and the displaying {props.children}
+
+Whenever this component is invoked {props.children} will also be displayed and this is just a reference to what is between the opening and closing tags of the component.
+
+```javascript
+// App.js
+
+render(){
+    return(
+        <div className="container">
+            <Picture key={picture.id} src={picture.src}>
+            //what is placed here is passed as props.children
+            </Picture>
+        </div>
+    )
+}
+```
+
+### Props vs. State:
+
+**Props =** data passed from parent to child
+**State =** dynamic data, triggers a rerender
+
+#### Immutable vs. Mutable data:
+
+A **mutable object** is an object whose state can be modified after it is created.
+Ex. objects, arrays, functions, classes, sets, and maps
+An **immutable object** is an object whose state cannot be modified after it is created.
+Ex. numbers and strings
+
 # Relational Databases
 
 ### Database
