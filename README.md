@@ -128,7 +128,7 @@ INSERT INTO movies (id, title, genre)
 ### Select ALL
 
 ```
-SELECT \* FROM movies
+SELECT * FROM movies
 ```
 
 ### Select specific data
@@ -170,17 +170,17 @@ The **LIKE** operator searches a specific pattern of one ( \ \_ ) or multiple ch
 ### Between
 
 ```
-SELECT _ FROM movies WHERE year BETWEEN 2000 AND 2018 ;
+SELECT * FROM movies WHERE year BETWEEN 2000 AND 2018 ;
 ```
 
 ### AND and OR
 
 ```
-SELECT _ FROM movies WHERE year BETWEEN 2000 AND 2018 AND genre = “drama”
+SELECT * FROM movies WHERE year BETWEEN 2000 AND 2018 AND genre = “drama”
 ```
 
 ```
-SELECT \* FROM movies WHERE genre = “crime” OR genre = “suspense”
+SELECT * FROM movies WHERE genre = “crime” OR genre = “suspense”
 ```
 
 ### Sorting data
@@ -196,7 +196,7 @@ SELECT * FROM movies ORDER BY title DESC (descending)
 ### Limit the data outcome
 
 ```
-SELECT _ FROM movies ORDER BY year DESC LIMIT 4;
+SELECT * FROM movies ORDER BY year DESC LIMIT 4;
 COUNT
 ```
 
