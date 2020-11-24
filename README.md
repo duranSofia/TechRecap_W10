@@ -114,7 +114,7 @@ USE <dbname>;
 CREATE TABLE movies (
     id INT,
     title VARCHAR(100),
-    genre VARCHAR(100),
+    genre VARCHAR(100)
 );
 ```
 
