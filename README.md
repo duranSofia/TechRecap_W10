@@ -167,7 +167,7 @@ DROP TABLE <movies>
 
 The **LIKE** operator searches a specific pattern of one ( \ \_ ) or multiple characters ( % )
 
-### BETWEEN
+### Between
 
 ```
 SELECT _ FROM movies WHERE year BETWEEN 2000 AND 2018 ;
@@ -193,14 +193,14 @@ SELECT * FROM movies ORDER BY title ASC (ascending)
 SELECT * FROM movies ORDER BY title DESC (descending)
 ```
 
-### LIMIT
+### Limit the data outcome
 
 ```
 SELECT _ FROM movies ORDER BY year DESC LIMIT 4;
 COUNT
 ```
 
-### GROUP BY
+### Group by
 
 ```
 SELECT campus, COUNT (*) as number_of_movies
