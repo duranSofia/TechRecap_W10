@@ -128,14 +128,14 @@ INSERT INTO movies (id, title, genre)
 ### Select ALL
 
 ```
-SELECT \* FROM movies
+SELECT \* FROM movies;
 ```
 
 ### Select specific data
 
 ```
 SELECT title, genre FROM movies
-WHERE genre = action
+WHERE genre = action;
 ```
 
 ### Make changes in the structure of a table
@@ -156,13 +156,13 @@ DELETE FROM movies WHERE id = 1;
 To empty the table data:
 
 ```
-TRUNCATE TABLE <movies>
+TRUNCATE TABLE <movies> ;
 ```
 
 Delete the table:
 
 ```
-DROP TABLE <movies>
+DROP TABLE <movies> ;
 ```
 
 The **LIKE** operator searches a specific pattern of one ( \ \_ ) or multiple characters ( % )
@@ -197,7 +197,6 @@ SELECT * FROM movies ORDER BY title DESC (descending)
 
 ```
 SELECT _ FROM movies ORDER BY year DESC LIMIT 4;
-COUNT
 ```
 
 ### Group by
